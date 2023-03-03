@@ -1,0 +1,34 @@
+.DropdownBtn {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+    margin-left: auto;
+    height: 100%;
+    background-color: rgb(60, 60, 60);
+}
+
+.DropdownBtn:hover {
+    filter: brightness(110%);
+    transition: filter 200ms ease-in-out;}
+
+.Title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.imageContainer {
+    background-image:url("./assets/sv-bg-img.jpg");
+    background-size: cover;
+    width: 12rem;
+    height: 100%;
+}
+
+.DropdownMenu {
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    background-color: rgb(64, 64, 64);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
