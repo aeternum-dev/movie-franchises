@@ -1,12 +1,12 @@
 import React from 'react'
 import "./Header.css"
-import DropdownBtn from "./DropdownBtn"
+import Dropdown from "./Dropdown"
 
 function Header() {
     return (
         <header>
-            <p>My Favorite Movie Franchises</p>
-            <DropdownBtn/>
+            <p>My Movie Franchises</p>
+            <Dropdown/>
         </header>
     );
 }
