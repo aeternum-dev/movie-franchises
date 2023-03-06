@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './App.css'
+import text from './FranchiseData.json'
 
 import Header from './Header'
 import FranchiseInfo from './FranchiseInfo'
@@ -12,9 +13,11 @@ function App() {
     <div className="App">
       <Header/> 
       <FranchiseInfo/>
+      {text.franchises.gf.title}
       <Footer/>
     </div>
   )
 }
 
 export default App
+

@@ -1,0 +1,28 @@
+{"franchises": {
+    "sw": {"title": "Star Wars",
+            "backdrop": "./assets/sw-bg-img.jpg",
+            "movies" : [
+                {"title" : "Star Wars: A New Hope", "poster" : "efe", "description" : "grg"},
+                {"title" : "Star Wars: Empire Strikes Back", "poster" : "efe", "description" : "grg"},
+                {"title" : "Star Wars: Return of Jedi", "poster" : "efe", "description" : "grg"},
+                {"title" : "Star Wars: Force Awekens", "poster" : "efe", "description" : "grg"}]},
+    "lotr": {"title": "Lord of The Rings",
+    "backdrop": "./assets/lotr-bg-img.jpg",
+    "movies" : [
+        {"title" : "The Lord of the Rings: The Fellowship of the Ring", "poster" : "efe", "description" : "grg"},
+        {"title" : "The Lord of the Rings: The Two Towers", "poster" : "efe", "description" : "grg"},
+        {"title" : "The Lord of the Rings: Return of the King", "poster" : "efe", "description" : "grg"}]},
+    "poa": {"title": "Planet of the Apes",
+    "backdrop": "./assets/poa-bg-img.jpg",
+    "movies" : [
+        {"title" : "Rise of the Planet of the Apes", "poster" : "efe", "description" : "grg"},
+        {"title" : "Dawn of the Planet of the Apes", "poster" : "efe", "description" : "grg"},
+        {"title" : "War of the Planet of the Apes", "poster" : "efe", "description" : "grg"}]},
+    "gf": {"title": "The Godfather",
+    "backdrop": "./assets/gf-bg-img.jpg",
+    "movies" : [
+        {"title" : "The Godfather", "poster" : "efe", "description" : "grg"},
+        {"title" : "The Godfather Part II", "poster" : "efe", "description" : "grg"},
+        {"title" : "The Godfather Part III", "poster" : "efe", "description" : "grg"}]}
+    }
+}
