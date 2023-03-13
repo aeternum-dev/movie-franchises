@@ -13,7 +13,6 @@ function App() {
     <div className="App">
       <Header/> 
       <FranchiseInfo/>
-      {text.franchises.gf.title}
       <Footer/>
     </div>
   )
