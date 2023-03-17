@@ -1,0 +1,19 @@
+.FranchiseInfo {
+  margin: 5rem 20rem 0 20rem;
+  column-count: 2;
+}
+
+.MovieInfo {
+  width: 74%;
+}
+
+.Poster {
+  width: 10rem;
+  float: left;
+  margin: 0 1rem 0.5rem 0;
+}
+
+.Description {
+  justify-self: center;
+  width: 80%;
+}
