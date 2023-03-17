@@ -11,7 +11,8 @@ import "./Dropdown.css"
 function DropdownElements() {
     return (
         <div>
-        {data.franchises.map((prop : any) => (
+            {/*The problem is that it's trying to use map on a json "dictionary" */}
+        {Object.values(data.franchises).map((prop : any) => (
             <div className="DropdownBtn">
               <h1 className="Title">{prop.title}</h1>
               <div className="imageContainer"><img src={prop.backdrop} alt=""/></div>
@@ -28,8 +29,8 @@ function Dropdown() {
 
     return (
         <div className='DropdownBtn' onClick={() => setopen(!open)}>
-            <h1 className='Title'>Star Wars</h1>
-            <div className="imageContainer"><img src="../src/assets/sw-bg-img.jpg" alt=""/></div>
+            <h1 className='Title'>The Godfather</h1>
+            <div className="imageContainer"><img src="../src/assets/gf-bg-img.jpg" alt=""/></div>
             {open && (<div className='DropdownMenu'>
                 {
                    DropdownElements()         
