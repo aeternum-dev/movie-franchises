@@ -1,6 +1,5 @@
 .FranchiseInfo {
   margin: 5rem 20rem 0 20rem;
-  column-count: 2;
 }
 
 .MovieInfo {
@@ -16,4 +15,31 @@
 .Description {
   justify-self: center;
   width: 80%;
+}
+
+.row {
+  display: flex;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.left {
+  color: blue;
+  width: 270rem;
+  padding-right: 2rem;
+}
+
+.left > img,
+.right > img {
+  width: 8rem;
+  float: left;
+  margin-right: 1rem;
+}
+
+.right {
+  color: red;
+  width: 270rem;
+  padding-left: 2rem;
 }

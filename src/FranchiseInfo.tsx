@@ -5,39 +5,57 @@ import {FranchiseList} from './types'
 import franchisesRaw from './FranchiseData.json'
 const franchises : FranchiseList = franchisesRaw 
 
+
+function MovieInfo(index: number, column: string) {
+  return (
+    <div className="MovieInfo">
+      
+    </div>
+  )
+}
+
 function FranchiseInfo(props : any) {
+
+  
+
+  const rows = []
+  const ms = franchises[props.currentFranchise].movies
+  for (let i = 0; i< ms.length; i += 2) {
+    if (i != ms.length-1 || i % 2 != 0) {
+      rows.push(
+        <div className="row">
+          <div className="left">
+            <h2>{ms[i].title}</h2>
+            <img src={ms[i].poster} alt="" />
+            <p>{ms[i].description}</p>
+          </div>
+          <div className='right'>
+            <h2>{ms[i+1].title}</h2>
+            <img src={ms[i+1].poster} alt="" />
+            <p>{ms[i+1].description}</p>
+          </div>
+        </div>
+      )
+    } else {
+      rows.push (
+        <div className="row">
+          <div className="left">
+            <h2>{ms[i].title}</h2>
+            <img src={ms[i].poster} alt="" />
+            <p>{ms[i].description}</p>
+          </div>
+          <div className='right'></div>
+        </div>
+      )
+    }
+    
+    
+  }
+
+
     return ( 
         <div className='FranchiseInfo'>
-          
-        {props.currentFranchise}
-
-        {franchises[props.currentFranchise].movies[1].description}
-
-
-          <div className='column'>
-            <div className="MovieInfo">
-              <h2 className="MovieTitle">{franchises.gf.movies[0].title}</h2>
-              <img className='Poster' src={franchises.gf.movies[0].poster} alt="f" />
-              <p className='Description'>{franchises.gf.movies[0].description}</p>
-            </div>
-            <div className="MovieInfo">
-              <h2 className="MovieTitle">{franchises.gf.movies[1].title}</h2>
-              <img className='Poster' src={franchises.gf.movies[1].poster} alt="g" />
-              <p className='Description'>{franchises.gf.movies[1].description}</p>
-            </div>
-            <div className="MovieInfo">
-              <h2 className="MovieTitle">{franchises.gf.movies[2].title}</h2>
-              <img className='Poster' src={franchises.gf.movies[2].poster} alt="w" />
-              <p className='Description'>{franchises.gf.movies[2].description}</p>
-            </div>
-            <div className="MovieInfo">
-              <h2 className="MovieTitle">{franchises.gf.movies[0].title}</h2>
-              <p className='Description'>{franchises.gf.movies[0].description}</p>
-            </div>
-          </div>
-          
-          
-            
+        {rows}  
         </div>
      );
 }
