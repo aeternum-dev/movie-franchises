@@ -3,83 +3,32 @@ import React from 'react'
 import './FranchiseInfo.css'
 import data from "./FranchiseData.json"
 
-function FranchiseInfo() {
+function FranchiseInfo(props : any) {
+
+    function currentFranchiseInfo(atr : string, data : any) {
+        for (let index in data.franchises) {
+            if (data.franchises[index].title == props.currentFranchise)
+                return data.franchises[index][atr]
+            }
+        }
+
+
     return ( 
         <div className='FranchiseInfo'>
           
+        {props.currentFranchise}
+        {data.franchises[2].movies[2].description}
+        {data.franchises[currentFranchiseInfo("movies",data)].movies.map((prop : any) => (
+            <div>
+                <h1 className="Title">{prop.title}</h1>
+                <p className="Description">{prop.descrption}</p>
+                <div className="imageContainer"><img src={prop.poster} alt=""/></div>
+            </div>
+        
+        ))}
+        
 
-        rrgrgrg
-        rgrgrgr
-        grgr
-        grgrg
-        rgrgrgrrgrgrg
-        rgrgrgrgrgrgh
-        ej
-        net
-        efrgrgrg
-        htjrtjrt
-        trhjtrhtr
-        hehehe
-        fefef
-        efefe
-        fefefef
-        eferher
-        z
-        jzjzjzj
-        zkzzk
-        ef
-        zkzkzk
-        kz
-        net
-        efrgrgrg
-        htjrtjrt
-        trhjtrhtr
-        hehehe
-        fefef
-        efefe
-        fefefef
-        eferher
-        z
-        jzjzjzj
-        zkzzk
-        ef
-        zkzkzk
-        kz
-        kzk
-        zkzkzkzkzkz
-        k5i77i
-        7i7i7i
-        7i7ii7i
-        i
-        7i7i7i7i
-        7i7ii7i7i
-        7i7i7i
-        htjtje
-        erzher
-
-
-          <div className='column'>
-            <div className="MovieInfo">
-              <h2 className="MovieTitle">{data.franchises.gf.movies[0].title}</h2>
-              <img className='Poster' src={data.franchises.gf.movies[0].poster} alt="f" />
-              <p className='Description'>{data.franchises.gf.movies[0].description}</p>
-            </div>
-            <div className="MovieInfo">
-              <h2 className="MovieTitle">{data.franchises.gf.movies[1].title}</h2>
-              <img className='Poster' src={data.franchises.gf.movies[1].poster} alt="g" />
-              <p className='Description'>{data.franchises.gf.movies[1].description}</p>
-            </div>
-            <div className="MovieInfo">
-              <h2 className="MovieTitle">{data.franchises.gf.movies[2].title}</h2>
-              <img className='Poster' src={data.franchises.gf.movies[2].poster} alt="w" />
-              <p className='Description'>{data.franchises.gf.movies[2].description}</p>
-            </div>
-            <div className="MovieInfo">
-              <h2 className="MovieTitle">{data.franchises.gf.movies[0].title}</h2>
-              <p className='Description'>{data.franchises.gf.movies[0].description}</p>
-            </div>
-          </div>
-          
+       
           
             
         </div>
