@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState} from 'react'
 
 import './App.css'
 import text from './FranchiseData.json'
@@ -9,10 +10,12 @@ import Footer from './Footer'
 
 function App() {
 
+  const [currentFranchise, setcurrentFranchise] = useState("sw")
+  
   return (
     <div className="App">
-      <Header/> 
-      <FranchiseInfo/>
+      <Header setcurrentFranchise={setcurrentFranchise} currentFranchise={currentFranchise}/> 
+      <FranchiseInfo currentFranchise={currentFranchise}/>
       <Footer/>
     </div>
   )
